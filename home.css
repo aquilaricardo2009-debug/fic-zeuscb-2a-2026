@@ -118,7 +118,7 @@ height: 60px;
     text-decoration: none;
     color: black;
 }
-#index:hover{
+#index1:hover{
    color: blue;
    
  animation: crescerEVoltar 2s ease-in-out infinite alternate;
