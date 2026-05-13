@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>lista de aluno</title>
+</head>
+<body>
+    <input type="text" id="nome" placeholder="nome">
+    <input type="number" id="idade" placeholder="idade">
+    <button onclick="cadastrar()">Cadastrar</button>
+    <ul id="lista"></ul>
+    <script>
+        function cadastrar() {
+            const nome = document.getElementById('nome').value;
+            const idade = document.getElementById('idade').value;
+
+            if (nome && idade) {
+                const lista = document.getElementById('lista');
+                const item = document.createElement('li');
+                item.textContent = `${nome} - ${idade} anos`;
+                lista.appendChild(item);
+
+                // Limpar os campos após o cadastro
+                document.getElementById('nome').value = '';
+                document.getElementById('idade').value = '';
+            } else {
+                alert('Por favor, preencha ambos os campos.');
+            }
+        }
+    </script>
+</body>
+</html>
